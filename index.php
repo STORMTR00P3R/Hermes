@@ -1,25 +1,13 @@
-<!doctype html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hermes RSS Reader</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="">
+require __DIR__ . '/vendor/autoload.php';
 
-  <meta property="og:title" content="Hermes RSS Reader">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="localhost">
-  <meta property="og:image" content="TODO">
-  <meta property="og:image:alt" content="TODO">
+$url = "https://www.teamcherry.com.au/blog?format=rss";
 
-</head>
+$rss = Feed::loadRss($url);
 
-<body>
+echo "<pre>";
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-</body>
+print_r($rss); // expect a SimpleXMLObject
 
-</html>
+?>
