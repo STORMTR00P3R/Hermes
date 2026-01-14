@@ -1,0 +1,20 @@
+{
+    "name": "eliasblum/hermes",
+    "description": "news aggregator",
+    "type": "project",
+    "require": {
+        "dg/rss-php": "^1.5"
+    },
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Eliasblum\\Hermes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "STORMTR00P3R",
+            "email": "noorblum16@gmail.com"
+        }
+    ]
+}
