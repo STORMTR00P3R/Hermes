@@ -18,7 +18,7 @@ $rss = Feed::loadRss($url);
 </head>
 <body>
     <h1><?=  htmlspecialchars($rss->title) ?>></h1>
-    <?php foreach($rss->item as $item)?>
+    <?php foreach($rss->item as $item): ?>
         <ul>
             <li><?= htmlspecialchars($item->item) ?></li>
         </ul>
