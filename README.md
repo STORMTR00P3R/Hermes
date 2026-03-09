@@ -20,6 +20,9 @@ $ sqlite3 db/hermes_development.sqlite < db/schema.sql
 
 ## Changelog
 
+### 2026-03-08
+- Added new feeds via form
+
 ### 2026-03-01
 - Updated README with installation instructions
 - Created db schema file

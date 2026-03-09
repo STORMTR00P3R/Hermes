@@ -19,13 +19,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_feed_url'])) {
 	}
 
 	if (empty($errors)) {
-		// TODO: Save the feed to the database
 
 		$stmt = $db->prepare("INSERT OR IGNORE INTO feeds (title, url, format) VALUES (:title, :url, :format)");
 
-		$stmt->bindValue(':title', $feed_title, SQLITE3_TEXT); // TODO: Create this variable lol
+		$stmt->bindValue(':title', $feed_title, SQLITE3_TEXT); 
 		$stmt->bindValue(':url', $url, SQLITE3_TEXT);
-		$stmt->bindValue(':format', $feed_format, SQLITE3_TEXT); // TODO: Create this variable lol
+		$stmt->bindValue(':format', $feed_format, SQLITE3_TEXT);
 		$stmt->execute();
 	}
 
@@ -33,6 +32,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_feed_url'])) {
 }
 
 ?>
+
 
 <form method="post">
 	<input type="url" placeholder="https://example.com" name="new_feed_url">
