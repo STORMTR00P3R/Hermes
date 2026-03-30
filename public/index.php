@@ -77,4 +77,3 @@ foreach($feeds as $index => $feed) {
 
     </body>
 </html>
-
